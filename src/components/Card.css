@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5.252px;
+    position: relative;
 }
 
 .card .cam{
@@ -61,5 +62,11 @@
 
 .bottom .box .gray-circle{
     height: 10.503px;
+}
+
+.card .card-profile{
+    position: absolute;
+    top: 15px;
+    right: 15.6px;
 }
 

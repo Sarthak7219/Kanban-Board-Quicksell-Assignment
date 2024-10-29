@@ -8,20 +8,22 @@ const priorityLabels = {
   3: "High",
   2: "Medium",
   1: "Low",
-  0: "No priority"
+  0: "No priority",
 };
 
 function Board({ tickets, users, groupValues, groupBy, sortBy }) {
   return (
-    <div className="board" style={{ display: 'flex', gap: '3rem' }}>
+    <div className="board" style={{ display: "flex", gap: "3rem" }}>
       {groupValues.map((value) => {
         // Check if the value corresponds to a user name
-        const isUser = users.some(user => user.name === value);
+        const isUser = users.some((user) => user.name === value);
 
         // Filter tickets based on the current group value
-        const filteredTickets = tickets.filter(ticket => 
-          ticket[groupBy.toLowerCase()] === value || 
-          (isUser && ticket.userId === users.find(user => user.name === value)?.id)
+        const filteredTickets = tickets.filter(
+          (ticket) =>
+            ticket[groupBy.toLowerCase()] === value ||
+            (isUser &&
+              ticket.userId === users.find((user) => user.name === value)?.id)
         );
 
         // Sort the filtered tickets based on the sortBy criteria
@@ -38,7 +40,8 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
           <div key={value}>
             <div className="board-top">
               <div className="left">
-                <ProfileIconIndicator />
+                {console.log(users)}
+                <ProfileIconIndicator value={value} users={users} />
                 <img src="" alt="" className="icon" />
                 <p>
                   {groupBy.toLowerCase() === "priority"
@@ -49,12 +52,16 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
               </div>
               <div className="right">
                 <img src="/images/add.svg" alt="Add" className="add-icon" />
-                <img src="/images/3dot.svg" alt="More Options" className="three-dot-icon" />
+                <img
+                  src="/images/3dot.svg"
+                  alt="More Options"
+                  className="three-dot-icon"
+                />
               </div>
             </div>
             <div className="cards-container">
               {sortedTickets.map((ticket) => (
-                <Card key={ticket.id} ticket={ticket} /> // Use unique key for Card
+                <Card key={ticket.id} ticket={ticket} groupBy={groupBy} /> // Use unique key for Card
               ))}
             </div>
           </div>

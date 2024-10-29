@@ -1,27 +1,48 @@
 import React from "react";
 import "./Card.css";
+import ProfileIconIndicator from "./ProfileIconIndicator";
 
-function Card({ ticket }) {
+const priorityIcons = {
+  0: "/images/noP.svg",
+  1: "/images/lowP.svg",
+  2: "/images/medP.svg",
+  3: "/images/highP.svg",
+  4: "/images/urgentP.svg",
+};
+
+const statusIcons = {
+  Todo: "/images/To-do.svg",
+  "In progress": "/images/in-progress.svg",
+  Backlog: "/images/Backlog.svg",
+  Done: "/images/Done.svg",
+  Cancelled: "/images/Cancelled.svg",
+};
+
+function Card({ ticket, groupBy }) {
   return (
     <div className="card">
       <div className="cam">
         <span className="number">{ticket.id}</span>
       </div>
       <div className="desc-box">
-        <img
-          src="/images/Backlog.svg"
-          alt="Status Icon"
-          className="status-icon"
-        />
+        {groupBy !== "Status" && ticket.status && (
+          <img
+            src={statusIcons[ticket.status]}
+            alt="Status Icon"
+            className="status-icon"
+          />
+        )}
         <div className="text">{ticket.title}</div>
       </div>
       <div className="bottom">
         <div className="box">
-          <img
-            src="/images/highP.svg"
-            alt="High Priority Icon"
-            className="icon"
-          />
+          {groupBy !== "priority" && ticket.priority && (
+            <img
+              src={priorityIcons[ticket.priority]}
+              alt="Priority Icon"
+              className="icon"
+            />
+          )}
         </div>
         <div className="box">
           <img
@@ -32,6 +53,11 @@ function Card({ ticket }) {
           <p>{ticket.tag}</p>
         </div>
       </div>
+      {groupBy !== "User" && (
+        <div className="card-profile">
+          <ProfileIconIndicator />
+        </div>
+      )}
     </div>
   );
 }
