@@ -1,0 +1,20 @@
+.profile-icon{
+    overflow: visible;
+    position: relative;
+}
+
+.profile-icon .profile{
+    width: 16.778px;
+    border-radius: 7.778px;
+    object-fit: cover;
+}
+
+.profile-icon .indicator-icon{
+    width: 6.667px;
+    fill: #DFE1E4;
+    stroke-width: 0.778px;
+    stroke: white;
+    position: absolute;
+    right: 0px;
+    top:10px;
+}

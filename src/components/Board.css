@@ -1,0 +1,19 @@
+.cards-container{
+    margin-top: 26.26px;
+    width: 336.105px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.board-top, .board-top .left, .board-top .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-top .left, .board-top .right{
+    gap: 11.5px;
+}
+
+

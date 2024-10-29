@@ -1,0 +1,65 @@
+.card{
+    background-color: white;
+    border-radius: var(--border-rad);
+    border: 0.525px solid var(--border-gray, #ECEFF2);
+    box-shadow: 0px 0px 8.403px 2.101px rgba(180, 182, 174, 0.20);
+    padding: 8.403px 15.755px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5.252px;
+}
+
+.card .cam{
+    width: fit-content;
+    display: flex;
+}
+
+
+.card .desc-box{
+    display: flex;
+    align-items: flex-start;
+    gap: 5.25px;
+}
+
+.card .desc-box .status-icon{
+    padding-top: 2.5px;
+}
+
+.card .desc-box .text{
+    max-width: 266px;
+
+}
+
+.card .bottom{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 5.25px;
+}
+
+.card .bottom .box{
+    display: flex;
+    align-items: center;
+    padding: 4.5px;
+    height: 23.107px;
+    border-radius: var(--border-rad);
+    border: 0.525px solid var(--border-gray, #ECEFF2);
+}
+
+.bottom .box .icon{
+    width: 22.705px;
+    height: 14.705px;
+    object-fit: fit;
+}
+
+.bottom .box p{
+    margin-left: 3.152px;
+    font-size: 11.554px;
+    color: var(--light-text-gray);
+}
+
+.bottom .box .gray-circle{
+    height: 10.503px;
+}
+
