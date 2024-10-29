@@ -20,8 +20,7 @@ const statusIcons = {
 
 function Card({ ticket, groupBy, users }) {
   const value = users.find((user) => user.id === ticket.userId)?.name;
-  console.log("value");
-  console.log(value);
+
   return (
     <div className="card">
       <div className="cam">

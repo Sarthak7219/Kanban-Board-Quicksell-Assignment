@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 import "./Board.css";
 import ProfileIconIndicator from "./ProfileIconIndicator";
+import { motion } from "framer-motion";
 
 const priorityLabels = {
   4: "Urgent",
@@ -31,7 +32,7 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
           if (sortBy.toLowerCase() === "title") {
             return a.title.localeCompare(b.title); // Alphabetical sorting by title
           } else if (sortBy.toLowerCase() === "priority") {
-            return a.priority - b.priority; // Numerical sorting by priority
+            return b.priority - a.priority; // Numerical sorting by priority
           }
           return 0; // Default case: no sorting
         });
@@ -40,8 +41,6 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
           <div key={value}>
             <div className="board-top">
               <div className="left">
-                {console.log(users)}
-
                 <ProfileIconIndicator value={value} users={users} />
                 <img src="" alt="" className="icon" />
                 <p>
@@ -60,16 +59,16 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
                 />
               </div>
             </div>
-            <div className="cards-container">
+            <motion.div Layout className="cards-container">
               {sortedTickets.map((ticket) => (
                 <Card
                   key={ticket.id}
                   ticket={ticket}
                   groupBy={groupBy}
                   users={users}
-                /> // Use unique key for Card
+                />
               ))}
-            </div>
+            </motion.div>
           </div>
         );
       })}

@@ -12,7 +12,7 @@ const iconMapping = {
   "In progress": "./images/in-progress.svg",
   Backlog: "./images/Backlog.svg",
   Canceled: "./images/Cancelled.svg",
-  Completed: "./images/Done.svg",
+  Done: "./images/Done.svg",
   "Anoop sharma": "./images/Anoop.png",
   Yogesh: "./images/Yogesh.png",
   "Shankar Kumar": "./images/Shankar.svg",

@@ -31,7 +31,7 @@ function App() {
     } else if (groupBy === "Priority") {
       values = [4, 3, 2, 1, 0]; // Priorities sorted from high to low
     } else if (groupBy === "Status") {
-      values = ["Todo", "In progress", "Backlog", "Canceled", "Completed"];
+      values = ["Todo", "In progress", "Backlog", "Canceled", "Done"];
     }
 
     setGroupValues([...new Set(values)]);
