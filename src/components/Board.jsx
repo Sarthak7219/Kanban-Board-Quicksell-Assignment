@@ -58,7 +58,7 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
                 />
               </div>
             </div>
-            <motion.div Layout className="cards-container">
+            <div Layout className="cards-container">
               {sortedTickets.map((ticket) => (
                 <Card
                   key={ticket.id}
@@ -67,7 +67,7 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
                   users={users}
                 />
               ))}
-            </motion.div>
+            </div>
           </div>
         );
       })}
