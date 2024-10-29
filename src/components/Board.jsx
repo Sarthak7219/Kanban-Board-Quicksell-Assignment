@@ -3,26 +3,63 @@ import Card from "./Card";
 import "./Board.css";
 import ProfileIconIndicator from "./ProfileIconIndicator";
 
-function Board() {
+const priorityLabels = {
+  4: "Urgent",
+  3: "High",
+  2: "Medium",
+  1: "Low",
+  0: "No priority"
+};
+
+function Board({ tickets, users, groupValues, groupBy, sortBy }) {
   return (
-    <div className="board">
-      <div className="board-top">
-        <div className="left">
-          <ProfileIconIndicator />
-          <img src="" alt="" className="icon" />
-          <p>Abhideep Maity</p>
-          <div className="number">1</div>
-        </div>
-        <div className="right">
-          <img src="/images/add.svg" alt="" className="add-icon" />
-          <img src="/images/3dot.svg" alt="" className="three-dot-icon" />
-        </div>
-      </div>
-      <div className="cards-container">
-        <Card />
-        <Card />
-        <Card />
-      </div>
+    <div className="board" style={{ display: 'flex', gap: '3rem' }}>
+      {groupValues.map((value) => {
+        // Check if the value corresponds to a user name
+        const isUser = users.some(user => user.name === value);
+
+        // Filter tickets based on the current group value
+        const filteredTickets = tickets.filter(ticket => 
+          ticket[groupBy.toLowerCase()] === value || 
+          (isUser && ticket.userId === users.find(user => user.name === value)?.id)
+        );
+
+        // Sort the filtered tickets based on the sortBy criteria
+        const sortedTickets = filteredTickets.sort((a, b) => {
+          if (sortBy.toLowerCase() === "title") {
+            return a.title.localeCompare(b.title); // Alphabetical sorting by title
+          } else if (sortBy.toLowerCase() === "priority") {
+            return a.priority - b.priority; // Numerical sorting by priority
+          }
+          return 0; // Default case: no sorting
+        });
+
+        return (
+          <div key={value}>
+            <div className="board-top">
+              <div className="left">
+                <ProfileIconIndicator />
+                <img src="" alt="" className="icon" />
+                <p>
+                  {groupBy.toLowerCase() === "priority"
+                    ? priorityLabels[value]
+                    : value}
+                </p>
+                <div className="number">{sortedTickets.length}</div>
+              </div>
+              <div className="right">
+                <img src="/images/add.svg" alt="Add" className="add-icon" />
+                <img src="/images/3dot.svg" alt="More Options" className="three-dot-icon" />
+              </div>
+            </div>
+            <div className="cards-container">
+              {sortedTickets.map((ticket) => (
+                <Card key={ticket.id} ticket={ticket} /> // Use unique key for Card
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
