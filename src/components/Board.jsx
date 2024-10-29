@@ -41,6 +41,7 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
             <div className="board-top">
               <div className="left">
                 {console.log(users)}
+
                 <ProfileIconIndicator value={value} users={users} />
                 <img src="" alt="" className="icon" />
                 <p>

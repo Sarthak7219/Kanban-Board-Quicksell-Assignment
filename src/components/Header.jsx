@@ -113,6 +113,9 @@ function Header({ onGroupingChange, onOrderingChange }) {
           </div>
         )}
       </div>
+      <p className="name">
+        Submitted by - <span>Sarthak Rangari (21117111)</span>
+      </p>
     </div>
   );
 }

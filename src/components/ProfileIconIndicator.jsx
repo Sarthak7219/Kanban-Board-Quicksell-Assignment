@@ -11,13 +11,13 @@ const iconMapping = {
   Todo: "./images/To-do.svg",
   "In progress": "./images/in-progress.svg",
   Backlog: "./images/Backlog.svg",
-  "Anoop sharma": "./images/profile-icon.svg",
-  Yogesh: "./images/profile-icon.svg",
-  "Shankar Kumar": "./images/profile-icon.svg",
-  Ramesh: "./images/profile-icon.svg",
-  Suresh: "./images/profile-icon.svg",
   Canceled: "./images/Cancelled.svg",
   Completed: "./images/Done.svg",
+  "Anoop sharma": "./images/Anoop.png",
+  Yogesh: "./images/Yogesh.png",
+  "Shankar Kumar": "./images/Shankar.svg",
+  Ramesh: "./images/Ramesh.png",
+  Suresh: "./images/Suresh.png",
 };
 
 function ProfileIconIndicator({ value, users }) {

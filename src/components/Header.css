@@ -3,7 +3,7 @@
     height: 40px;
     background-color: white;
     display: flex;
-    align-items: center;
+    align-items: center;justify-content: space-between;
 }
 
 .navbar .dropdown-cont{
@@ -103,4 +103,15 @@
 
 .select-dropdown-cont .dropdown-options p:hover{
     background-color: #dbeafe;
+}
+
+.name{
+    font-weight: 200;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.name span{
+    font-size: 14px;
+    font-weight: 300;
 }

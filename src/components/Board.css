@@ -1,6 +1,7 @@
 .board{
     display: flex;
     gap: 30px;
+    row-gap: 50px;  
     flex-wrap: nowrap;
     justify-content: center;
 }
@@ -22,6 +23,10 @@
 .board-top .left, .board-top .right{
     gap: 11.5px;
 }
+
+/* .board-top .left .profile-icon .profile{
+    width: 12.68px;
+} */
 
 @media (max-width: 1360px) {
     .board {
