@@ -1,6 +1,13 @@
+.board{
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .cards-container{
     margin-top: 26.26px;
-    width: 336.105px;
+    width: 273.967px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -16,4 +23,9 @@
     gap: 11.5px;
 }
 
+@media (max-width: 1360px) {
+    .board {
+        flex-wrap: wrap;       /* Enable wrapping */
+    }
+}
 

@@ -1,6 +1,6 @@
 .navbar{
-    padding: 12px 30px;
-    height: 50px;
+    padding: 12px 32.61px;
+    height: 40px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     gap: 3.8px;
-    height: 25.208px;
+    height: 20.548px;
     padding: 4.204px 8.403px 4.199px 8.402px;
     border-radius: 5.252px;
     border: 1.05px solid var(--border-gray, #ECEFF2);
@@ -35,11 +35,11 @@
     bottom: -105px;
     left: 0px;
     display: flex;
-    width: 290.065px;
-    padding: 12.225px 20.004px;
+    width: 236.385px;
+    padding: 9.963px 16.302px;
     flex-direction: column;
     align-items: center;
-    gap: 8.891px;
+    gap: 7.246px;
     border-radius: var(--border-rad);
     background-color: white;
     box-shadow: 0px 0px 8.891px 2.223px rgba(180, 182, 174, 0.20);
@@ -47,7 +47,7 @@
 }
 
 .option-box-open .optns{
-    width: 250px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

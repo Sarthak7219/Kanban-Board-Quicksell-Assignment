@@ -1,15 +1,15 @@
 :root {
   --primary-text-black: #282A2F;
   --bg-color: #F4F5F8;
-  --primary-text-size:13.333px;
+  --primary-text-size:10.868px;
   --primary-text-weight:500;
-  --primary-text-letter-spacing:0.6px;
+  --primary-text-letter-spacing:0.489px;
   --light-text-gray:#6B6F76;
-  --light-text-size:12.604px;
+  --light-text-size:10.274px;
   --light-text-weight:400;
-  --light-text-spacing:0.252px;
+  --light-text-spacing:0.205px;
   --border-gray: #ECEFF2;
-  --border-rad: 5.252px;
+  --border-rad: 4.281px;
 }
 
 *{
@@ -36,7 +36,7 @@
 
 .app .outer_cont{
   flex: 1;
-  padding: 31.5px 44px 0 44px;
+  padding: 31.5px 32.61px 0 32.61px;
   overflow-x: auto;
   background-color: var(--bg-color);
 

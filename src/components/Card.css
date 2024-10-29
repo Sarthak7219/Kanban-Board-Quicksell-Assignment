@@ -24,11 +24,14 @@
 }
 
 .card .desc-box .status-icon{
+    width: 13.992px;
+    height: auto;
     padding-top: 2.5px;
+    object-fit: contain;
 }
 
 .card .desc-box .text{
-    max-width: 266px;
+    max-width: 225px;
 
 }
 
@@ -42,21 +45,21 @@
 .card .bottom .box{
     display: flex;
     align-items: center;
-    padding: 4.5px;
-    height: 23.107px;
+    padding: 4.5px 7px;
+    height: 18.835px;
     border-radius: var(--border-rad);
     border: 0.525px solid var(--border-gray, #ECEFF2);
 }
 
 .bottom .box .icon{
-    width: 22.705px;
-    height: 14.705px;
+    width: 14.705px;
+    height: auto;
     object-fit: fit;
 }
 
 .bottom .box p{
-    margin-left: 3.152px;
-    font-size: 11.554px;
+    margin-left: 2.57px;
+    font-size: 9.418px;
     color: var(--light-text-gray);
 }
 
@@ -66,7 +69,7 @@
 
 .card .card-profile{
     position: absolute;
-    top: 15px;
-    right: 15.6px;
+    top: 11.44px;
+    right: 12.52px;
 }
 

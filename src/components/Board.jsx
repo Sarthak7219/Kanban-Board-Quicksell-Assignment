@@ -13,7 +13,7 @@ const priorityLabels = {
 
 function Board({ tickets, users, groupValues, groupBy, sortBy }) {
   return (
-    <div className="board" style={{ display: "flex", gap: "3rem" }}>
+    <div className="board">
       {groupValues.map((value) => {
         // Check if the value corresponds to a user name
         const isUser = users.some((user) => user.name === value);
@@ -61,7 +61,12 @@ function Board({ tickets, users, groupValues, groupBy, sortBy }) {
             </div>
             <div className="cards-container">
               {sortedTickets.map((ticket) => (
-                <Card key={ticket.id} ticket={ticket} groupBy={groupBy} /> // Use unique key for Card
+                <Card
+                  key={ticket.id}
+                  ticket={ticket}
+                  groupBy={groupBy}
+                  users={users}
+                /> // Use unique key for Card
               ))}
             </div>
           </div>
