@@ -1,6 +1,6 @@
 Kanban Board - QuickSell Frontend Assignment
 
-This project is a submission for the frontend role assignment at QuickSell. The task involved creating a Kanban board in React with an identical UI to the provided design, pulling data from a specified API, and integrating several filtering and sorting features.
+This project is my submission for the frontend role assignment at QuickSell.
 
 TASKS:
 - Created a Kanban board UI closely following the provided design.
