@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 import "./Board.css";
 import ProfileIconIndicator from "./ProfileIconIndicator";
-import { motion } from "framer-motion";
 
 const priorityLabels = {
   4: "Urgent",
@@ -14,7 +13,7 @@ const priorityLabels = {
 
 function Board({ tickets, users, groupValues, groupBy, sortBy }) {
   return (
-    <div className="board">
+    <div className="board ">
       {groupValues.map((value) => {
         // Check if the value corresponds to a user name
         const isUser = users.some((user) => user.name === value);
