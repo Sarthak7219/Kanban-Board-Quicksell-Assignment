@@ -76,9 +76,34 @@ function Header({ onGroupingChange, onOrderingChange }) {
                 </div>
                 {showGroupingOptions && (
                   <div className="dropdown-options">
-                    <p onClick={() => handleGroupingSelect("Status")}>Status</p>
-                    <p onClick={() => handleGroupingSelect("User")}>User</p>
-                    <p onClick={() => handleGroupingSelect("Priority")}>
+                    <p
+                      onClick={() => handleGroupingSelect("Status")}
+                      style={
+                        grouping === "Status"
+                          ? { fontWeight: "800", fontSize: "11.5px" }
+                          : {}
+                      }
+                    >
+                      Status
+                    </p>
+                    <p
+                      onClick={() => handleGroupingSelect("User")}
+                      style={
+                        grouping === "User"
+                          ? { fontWeight: "800", fontSize: "11.5px" }
+                          : {}
+                      }
+                    >
+                      User
+                    </p>
+                    <p
+                      onClick={() => handleGroupingSelect("Priority")}
+                      style={
+                        grouping === "Priority"
+                          ? { fontWeight: "800", fontSize: "11.5px" }
+                          : {}
+                      }
+                    >
                       Priority
                     </p>
                   </div>
@@ -102,10 +127,26 @@ function Header({ onGroupingChange, onOrderingChange }) {
                 </div>
                 {showOrderingOptions && (
                   <div className="dropdown-options">
-                    <p onClick={() => handleOrderingSelect("Priority")}>
+                    <p
+                      onClick={() => handleOrderingSelect("Priority")}
+                      style={
+                        ordering === "Priority"
+                          ? { fontWeight: "800", fontSize: "11.5px" }
+                          : {}
+                      }
+                    >
                       Priority
                     </p>
-                    <p onClick={() => handleOrderingSelect("Title")}>Title</p>
+                    <p
+                      onClick={() => handleOrderingSelect("Title")}
+                      style={
+                        ordering === "Title"
+                          ? { fontWeight: "800", fontSize: "11.5px" }
+                          : {}
+                      }
+                    >
+                      Title
+                    </p>
                   </div>
                 )}
               </div>
