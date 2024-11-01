@@ -45,14 +45,13 @@
 .card .bottom .box{
     display: flex;
     align-items: center;
-    padding: 4.5px 7px;
-    height: 18.835px;
+    padding: 3.424px 4.051px;
     border-radius: var(--border-rad);
     border: 0.525px solid var(--border-gray, #ECEFF2);
 }
 
 .bottom .box .icon{
-    width: 14.705px;
+    width: 11.8px;
     height: auto;
     object-fit: fit;
 }
