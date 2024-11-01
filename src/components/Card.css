@@ -3,12 +3,14 @@
     border-radius: var(--border-rad);
     border: 0.525px solid var(--border-gray, #ECEFF2);
     box-shadow: 0px 0px 8.403px 2.101px rgba(180, 182, 174, 0.20);
-    padding: 8.403px 15.755px;
+    padding-left: 15.755px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 5.252px;
     position: relative;
+    height: 90px;
+    justify-content: center;
 }
 
 .card .cam{
@@ -26,12 +28,18 @@
 .card .desc-box .status-icon{
     width: 13.992px;
     height: auto;
-    padding-top: 2.5px;
+    padding-top: 0.8px;
     object-fit: contain;
 }
 
 .card .desc-box .text{
     max-width: 205px;
+    max-height: 25.6px;
+    overflow: hidden;                 /* Hide overflowed content */
+    display: -webkit-box;             /* Set for multi-line ellipsis */
+    -webkit-line-clamp: 2;            /* Show a maximum of 2 lines */
+    -webkit-box-orient: vertical;     /* Vertical layout for line clamp */
+    text-overflow: ellipsis;  
 
 }
 
