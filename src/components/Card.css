@@ -33,7 +33,7 @@
 }
 
 .card .desc-box .text{
-    max-width: 205px;
+    max-width: 206px;
     max-height: 25.6px;
     overflow: hidden;                 /* Hide overflowed content */
     display: -webkit-box;             /* Set for multi-line ellipsis */
